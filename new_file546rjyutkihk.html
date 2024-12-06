@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>左边导航右边内容</title>
+</head>
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+  }
+  
+  .container {
+      display: flex;
+  }
+  
+  .sidebar {
+      width: 200px;
+      background-color: #f4f4f4;
+      padding: 10px;
+  }
+  
+  .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+  }
+  
+  .sidebar li {
+      padding: 10px;
+      cursor: pointer;
+  }
+  
+  .sidebar li:hover {
+      background-color: #ddd;
+  }
+  
+  .content {
+      flex-grow: 1;
+      padding: 20px;
+      background-color: #fff;
+  }
+  
+  .content-item {
+      display: none; /* 初始隐藏所有内容 */
+  }
+  
+  .content-item.active {
+      display: block; /* 仅显示活动内容 */
+  }
+</style>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li data-content="content1">导航项 1</li>
+                <!-- <li data-content="content2">导航项 2</li> -->
+                <!-- <li data-content="content3">导航项 3</li> -->
+            </ul>
+        </div>
+        <div class="content">
+            <div id="content1" class="content-item">这是内容 1</div>
+            <div id="content2" class="content-item">这是内容 2</div>
+            <div id="content3" class="content-item">这是内容 3</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const items = document.querySelectorAll('.sidebar li');
+      const contentItems = document.querySelectorAll('.content-item');
+  
+      items.forEach(item => {
+          item.addEventListener('mouseenter', function() {
+              // 隐藏所有内容
+              contentItems.forEach(content => {
+                  content.classList.remove('active');
+              });
+  
+              // 显示对应的内容
+              const contentId = this.getAttribute('data-content');
+              document.getElementById(contentId).classList.add('active');
+          });
+      });
+  });
+
+</script>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: aliceblue;
+    }
+
+    .yinYing {
+      box-shadow: rgb(0 0 0 /20%) 6px 2px 1px -1px,
+        rgb(0 0 0 /14%), rgb(0 0 0 /12%) 0px 1px 3px 0px;
+    }
+
+    * {
+      border: 1px solid black;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .baise {
+      background-color: #239e4a;
+    }
+
+    .flex1 {
+      flex: 1;
+    }
+
+    .column {
+      flex-direction: column;
+    }
+
+    .mg8 {
+      margin: 8px;
+    }
+
+    .mgr8 {
+      margin-right: 8px;
+    }
+
+    .mgt8 {
+      margin-top: 8px;
+    }
+
+    .daoHang {
+      padding: 10px 20px;
+      border-bottom: 1px solid gray;
+      font-size: 14px;
+      color: #000;
+    }
+
+    @media (max-width: 600px) {
+      .ceBian {
+        display: none;
+      }
+
+      .nieRong {
+        flex-direction: column;
+      }
+
+      .shuJuQu {
+        flex-direction: column;
+      }
+
+      .youQu {
+        margin-left: 8px;
+      }
+
+      .shuJu {
+        /* margin-bottom: 8px; */
+        margin: 0 0 8px;
+        flex: auto;
+      }
+    }
+
+    /* .nieRong::-webkit-scrollbar{
+      display: none;//去掉轮动条
+    } */
+  </style>
+  <body class="flex">
+    <!-- 主区域 -->
+    <div class=" flex1 column flex">
+      <!-- 头部栏 -->
+      <div class="baise  yinYing" style="height: 60px;z-index: 1;"> </div>
+      <!-- 内容区域 -->
+      <div class="flex1 flex nieRong" style="overflow: auto;">
+        <!-- 左区 -->
+        <div class="flex column mg8" style="flex:3">
+          <!-- 列表区 -->
+          <div class=" flex column">
+            <!-- 列表项 -->
+            <div class="baise mgt8 yinYing" style="height: 160px;"></div>
+            <div class="baise mgt8 yinYing" style="height: 160px;"></div>
+            <div class="baise mgt8 yinYing" style="height: 160px;"></div>
+            <div class="baise mgt8" style="height: 160px;"></div>
+            <div class="baise mgt8" style="height: 160px;"></div>
+            <div class="baise mgt8" style="height: 160px;"></div>
+            <div class="baise mgt8" style="height: 160px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
