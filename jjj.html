@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      border: 1px solid #666;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: antiquewhite;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .column {
+      flex-direction: column;
+    }
+
+    .hei_to {
+      background-color: black;
+      color: #fff;
+      /* font-size: 12px;s */
+    }
+
+    .hei_to_1>a {
+      list-style: none;
+      text-decoration: none;
+      color: #fff;
+
+      .to {
+        background-color: aquamarine;
+        width: 100vw;
+      }
+
+      .sou_to label ul {
+        display: none;
+      }
+/* 
+      .sou_to label:hover ul {
+        display: block;
+      } */
+  </style>
+  <body class="flex column">
+    <!-- 导航栏 -->
+    <div class="flex column">
+      <div class="to">
+        <div style="width: 100vw;background-color: black;">
+          <div class="hei_to flex" style="height:49px; width: 1184px; margin: auto;">
+            <div class="hei_to_1 flex">
+              <a href="#">题目</a>
+              <a href="#">题目</a>
+              <a href="#">题目</a>
+              <a href="#">题目</a>
+              <a href="#">题目</a>
+              <a href="#">题目</a>
+            </div>
+          </div>
+        </div>
+        <div style="background-color: #00b4b3;width: 100vw;">
+          <div class="" style="width: 1084px;margin: auto;background-color: #00b4b3;">
+            <img src="https://img.bosszhipin.com/static/file/2024/mctx1cdg891707037634775.png" alt=""
+              style="height: 120px;width: 416px;margin: 0 auto -4px 0;border: 0;" />
+          </div>
+        </div>
+        <div>
+          <div style="background-color: #e3f3f6;width: 100vw;">
+            <div class="sousuo " style="width: 1184px;margin: auto;height: 146px;">
+              <form action="" class="flex" style="height:50px;width: 900px;margin: 24px auto auto;">
+                <div class="sou_to" style="width: 84px; height: 28px;margin: 11px 18px;">
+                  <label class="dropdown  flex column" style="font-size: 16px;">
+                    <input type="checkbox" id="dropdown-toggle"
+                      style="text-decoration: none;list-style: none;display: none;" />
+                    <span class="title" style="margin: 2.5px;">职位类型</span>
+                    <ul style="list-style: none;text-decoration: none;padding: 0;z-index: 10;" class="flex column ">
+                      <li><a href="#">产品经理</a></li>
+                      <li><a href="#">销售</a></li>
+                      <li><a href="#">互联网/AI</a></li>
+                      <li><a href="#">人力/行政/法政</a></li>
+                    </ul>
+                  </label>
+                </div>
+                <input type="text" style="width: 662px; border-radius: 10px;padding: 11px 18px;z-index: 2;" />
+                <button
+                  style="width: 128px; height: 54px;background-color: #00b4b3;margin-left: -20px;margin-top: -2px;padding: 0;border: none;font-size: 18px;font-weight: bold;color: aliceblue;">搜索</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 内容区域 -->
+    <div class="flex column" style="flex: 1;overflow: auto;">
+      <div class="column flex">
+        <div class="" style="height: 200px;background-color: aquamarine;"></div>
+        <div class="" style="height: 200px;background-color: chartreuse;"></div>
+        <div class="" style="height: 200px;background-color: blue;"></div>
+        <div class="" style="height: 200px;background-color: blueviolet;"></div>
+        <div class="" style="height: 200px;background-color: cadetblue;"></div>
+        <!-- 页脚 -->
+        <div class="" style="height: 90px;background-color: aqua;"></div>
+      </div>
+    </div>
+  </body>
+</html>

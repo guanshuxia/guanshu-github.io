@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航栏示例</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+        }
+        .navbar {
+            width: 200px;
+            background-color: white;
+            border-right: 1px solid #ccc;
+        }
+        .navbar-item {
+            padding: 15px;
+            cursor: pointer;
+            color: black;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .navbar-item:hover {
+            background-color: #f0f0f0;
+        }
+        .active {
+            background-color: blue;
+            color: white;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .box {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #f9f9f9;
+            position: relative;
+            transition: background-color 0.3s;
+        }
+        .box:hover {
+            background-color: #e0e0e0;
+        }
+        .detail {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .tags {
+            margin-top: 10px;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 5px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="navbar-item" onclick="showContent('item1')">导航项 1</div>
+    <div class="navbar-item" onclick="showContent('item2')">导航项 2</div>
+    <div class="navbar-item" onclick="showContent('item3')">导航项 3</div>
+</div>
+
+<div class="content" id="content">
+    <h2>请选择一个导航项</h2>
+</div>
+
+<script>
+    function showContent(item) {
+        // 清除当前活动状态
+        const items = document.querySelectorAll('.navbar-item');
+        items.forEach(i => {
+            i.classList.remove('active');
+        });
+
+        // 设置当前项为活动状态
+        const activeItem = document.querySelector(`.navbar-item[onclick="showContent('${item}')"]`);
+        activeItem.classList.add('active');
+
+        // 更新内容区域
+        const contentDiv = document.getElementById('content');
+        contentDiv.innerHTML = '';
+
+        // 根据所选项更新内容
+        if (item === 'item1') {
+            contentDiv.innerHTML = `
+                <div class="box">
+                    <h3>盒子 1</h3>
+                    <p>这是盒子 1 的内容。<a href="#" onclick="alert('跳转到盒子 1 相关页面')">点击这里</a></p>
+                    <span class="detail" onclick="alert('盒子 1 详情')">详情</span>
+                    <div class="tags">
+                        <span class="tag">标签 1</span>
+                        <span class="tag">标签 2</span>
+                        <span class="tag">标签 3</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <h3>盒子 2</h3>
+                    <p>这是盒子 2 的内容。<a href="#" onclick="alert('跳转到盒子 2 相关页面')">点击这里</a></p>
+                    <span class="detail" onclick="alert('盒子 2 详情')">详情</span>
+                    <div class="tags">
+                        <span class="tag">标签 1</span>
+                        <span class="tag">标签 4</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <h3>盒子 3</h3>
+                    <p>这是盒子 3 的内容。<a href="#" onclick="alert('跳转到盒子 3 相关页面')">点击这里</a></p>
+                    <span class="detail" onclick="alert('盒子 3 详情')">详情</span>
+                    <div class="tags">
+                        <span class="tag">标签 2</span>
+                        <span class="tag">标签 5</span>
+                    </div>
+                </div>
+            `;
+        } else if (item === 'item2') {
+            contentDiv.innerHTML = `
+                <div class="box">
+                    <h3>盒子 4</h3>
+                    <p>这是盒子 4 的内容。<a href="#" onclick="alert('跳转到盒子 4 相关页面')">点击这里</a></p>
+                    <span class="detail" onclick="alert('盒子 4 详情')">详情</span>
+                    <div class="tags">
+                        <span class="tag">标签 6</span>
+                        <span class="tag">标签 7</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <h3>盒子 5</h3>
+                    <p>这是盒子 5 的内容。<a href="#" onclick="alert('跳转到盒子 5 相关页面')">点击这里</a></p>
+                    <span class="detail" onclick="alert('盒子 5 详情')">详情</span>
+                    <div class="tags">
+                        <span class="tag">标签 8</span>
+                        <span class="tag">标签 9</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <h3>盒子 6</h3>
+                    <p>这是盒子 6 的内容。<a href="#" onclick="alert('跳转到盒子 6 相关页面')">点击这里</a></p>
+                    <span class="detail" onclick="alert('盒子 6 详情')">详情</span>
+                    <div class="tags">
+                        <span class="tag">标签 10</span>
+                    </div>
+                </div>
+            `;
+        } else if (item === 'item3') {
+            contentDiv.innerHTML = `
+                <div class="box">
+                    <h3>盒子 7</h3>
+                    <p>这是盒子 7 的内容。<a href="#" onclick="alert('跳转到盒子 7 相关页面')">点击这里</a></p>
+                    <span class="detail" onclick="alert('盒子 7 详情')">详情</span>
+                    <div class="tags">
+                        <span class="tag">标签 11</span>
+                        <span class="tag">标签 12</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <h3>盒子 8</h3>
+                    <p>这是盒子 8 的内容。<a href="#" onclick="alert('跳转到盒子 8 相关页面')">点击这里</a></p>
+                    <span class="detail" onclick="alert('盒子 8 详情')">详情</span>
+                    <div class="tags">
+                        <span class="tag">标签 13</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <h3>盒子 9</h3>
+                    <p>这是盒子 9 的内容。<a href="#" onclick="alert('跳转到盒子 9 相关页面')">点击这里</a></p>
+                    <span class="detail" onclick="alert('盒子 9 详情')">详情</span>
+                    <div class="tags">
+                        <span class="tag">标签 14</span>
+                    </div>
+                </div>
+            `;
+        }
+    }
+</script>
+
+</body>
+</html>

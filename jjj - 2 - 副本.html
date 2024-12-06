@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: #e3f3f6;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .column {
+      flex-direction: column;
+    }
+
+    .hei_to {
+      background-color: black;
+      color: #fff;
+    }
+
+    .hei_to_1>a {
+      list-style: none;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .to {
+      background-color: #e3f3f6;
+      width: 100vw;
+    }
+
+    .sou_to label ul {
+      display: none;
+    }
+
+    #tis .tishi_1 {
+      background-color: aquamarine;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    .zhiye p {
+      font-size: 15px;
+      margin-left: 20px;
+      color: #828282;
+    }
+    .content_yingchang::-webkit-scrollbar {
+   /*高宽分别对应横竖滚动条的尺寸*/
+    width: 4px;     
+    height: 1px;
+  }
+  
+    /*滚动条里面小方块*/
+    .content_yingchang::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+     -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+      background: #cfcfcf;
+    }
+    
+    /*滚动条里面轨道*/
+    .content_yingchang::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      background: #EDEDED;
+    }
+    .yingchang_dianji:hover .yingchang_chuxian{
+      
+    }
+  </style>
+  <body class="flex column">
+    <!-- 导航栏 -->
+    <div class="flex column">
+      <div class="to">
+        <div style="width: 100vw;background-color: black;">
+          <div class="hei_to flex" style="height:49px; width: 1184px; margin: auto;">
+            <div class="hei_to_1 flex">
+              <a href="#">题目</a>
+              <a href="#">题目</a>
+              <a href="#">题目</a>
+              <a href="#">题目</a>
+              <a href="#">题目</a>
+              <a href="#">题目</a>
+            </div>
+          </div>
+        </div>
+        <div style="background-color: #00b4b3;width: 100vw;">
+          <div class="" style="width: 1084px;margin: auto;background-color: #00b4b3;">
+            <img src="https://img.bosszhipin.com/static/file/2024/mctx1cdg891707037634775.png" alt=""
+              style="height: 120px;width: 416px;margin: 0 auto -4px 0;border: 0;" />
+          </div>
+        </div>
+        <div>
+          <div style="background-color: #e3f3f6;width: 100vw;">
+            <div class="sousuo " style="width: 1184px;margin: auto;">
+              <form action="" class="flex"
+                style="height:50px;width: 900px;margin: 24px auto auto;background-color: white;border: 2px solid #00b4b3;border-radius: 15px;">
+                <div class="sou_to" style="width: 84px; height: 28px;margin: 11px 18px;">
+                  <label class="dropdown  flex column" style="font-size: 16px;">
+                    <input type="checkbox" id="dropdown-toggle"
+                      style="text-decoration: none;list-style: none;display: none;" />
+                    <span class="title" style="margin: 2.5px;">职位类型</span>
+                    <ul style="list-style: none;text-decoration: none;padding: 0;z-index: 10;display: none;"
+                      class="flex column ">
+                      <li><a href="#">产品经理</a></li>
+                      <li><a href="#">销售</a></li>
+                      <li><a href="#">互联网/AI</a></li>
+                      <li><a href="#">人力/行政/法政</a></li>
+                    </ul>
+                  </label>
+                </div>
+                <input type="text"
+                  style="width: 662px; border-radius: 10px;padding: 11px 18px;z-index: 2;border: none;" />
+                <button
+                  style="width: 128px; height: 54px;background-color: #00b4b3;margin-left: -20px;margin-top: -2px;padding: 0;border: none;font-size: 18px;font-weight: bold;color: aliceblue;border-radius: 10px;">搜索</button>
+              </form>
+
+            </div>
+            <div class="flex" style="width: 100vw;justify-content: center;padding-top: 16px;">
+              <div class="flex " id="tis"
+                style="width: 794px; padding: 16px auto 32px;margin-bottom: 15px;margin-left: -100px;">
+                <div class="tishi" style="margin-top: 2px;color:#bdbdbd;">热门职位:</div>
+                <div class="tishi_1"
+                  style="margin-left: 20px;color:#00b4b3;background-color: aliceblue;margin-top: 2px;padding-left: 5px;padding-right: 5px;">
+                  Java</div>
+                <div class="tishi_1"
+                  style="margin-left: 20px;color: #00b4b3;background-color: aliceblue;margin-top: 2px;padding-left: 5px;padding-right: 5px;">
+                  C#</div>
+                <div class="tishi_1"
+                  style="margin-left: 20px;color: #00b4b3;background-color: aliceblue;margin-top: 2px;padding-left: 5px;padding-right: 5px;">
+                  .NET</div>
+                <div class="tishi_1"
+                  style="margin-left: 20px;color: #00b4b3;background-color: aliceblue;margin-top: 2px;padding-left: 5px;padding-right: 5px;">
+                  测试工程师</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 内容区域 -->
+      <div class="flex column" style="flex: 1;overflow: auto;">
+        <div class="column flex">
+          <div class="flex" style="background-color: #e3f3f6;height: 339px;">
+            <div class="content_1 flex" style="width: 1184px;margin: 15px auto;">
+              <div class="box flex column zhiye"
+                style="background-color: #ffffff;border-radius: 10px;width: 380px; height: 339.8px;">
+                <div class="left flex yingchang_dianji"
+                  style="width: 346px;height: 22px;padding: 9px 17px;flex-direction: row;justify-content: space-between;">
+                  <div class="flex">
+                    <span>互联网/AI </span>
+                    <p>Java</p>
+                    <p>C/C++</p>
+                    <p>PHP</p>
+                  </div>
+                  <div>
+                    <b style="font-size: 10px;">></b>
+                  </div>
+                </div>
+                <div class="left flex"
+                  style="width: 346px;height: 22px;padding: 9px 17px;flex-direction: row;justify-content: space-between;">
+                  <div class="flex">
+                    <span>电子/电气/通信</span>
+                    <p>电子工程师</p>
+                    <p>硬件工程师</p>
+                  </div>
+                  <div>
+                    <b style="font-size: 10px;">></b>
+                  </div>
+                </div>
+                <div class="left flex"
+                  style="width: 346px;height: 22px;padding: 9px 17px;flex-direction: row;justify-content: space-between;">
+                  <div class="flex">
+                    <span>产品</span>
+                    <p>产品经理</p>
+                    <p>产品专员/助理</p>
+                  </div>
+                  <div>
+                    <b style="font-size: 10px;">></b>
+                  </div>
+                </div>
+                <div class="left flex"
+                  style="width: 346px;height: 22px;padding: 9px 17px;flex-direction: row;justify-content: space-between;">
+                  <div class="flex">
+                    <span>客服/运营</span>
+                    <p>客服专员</p>
+                    <p>客服主管</p>
+                    <p>客服经理</p>
+                  </div>
+                  <div>
+                    <b style="font-size: 10px;">></b>
+                  </div>
+                </div>
+                <div class="left flex"
+                  style="width: 346px;height: 22px;padding: 9px 17px;flex-direction: row;justify-content: space-between;">
+                  <div class="flex">
+                    <span>销售</span>
+                    <p>销售专员</p>
+                    <p>电话销售</p>
+                    <p>网络销售</p>
+                  </div>
+                  <div>
+                    <b style="font-size: 10px;">></b>
+                  </div>
+                </div>
+                <div class="left flex"
+                  style="width: 346px;height: 22px;padding: 9px 17px;flex-direction: row;justify-content: space-between;">
+                  <div class="flex">
+                    <span>人力/行政/法务</span>
+                    <p>人力资源专员/助理</p>
+                  </div>
+                  <div>
+                    <b style="font-size: 10px;">></b>
+                  </div>
+                </div>
+                <div class="left flex"
+                  style="width: 346px;height: 22px;padding: 9px 17px;flex-direction: row;justify-content: space-between;">
+                  <div class="flex">
+                    <span>财务/审计/税务</span>
+                    <p style="background-color: #00b4b3;color: #fff;">会计</p>
+                    <p style="background-color: #00b4b3;color: #fff;">总账会计</p>
+                    <p style="background-color: #00b4b3;color: #fff;">成本会计</p>
+                  </div>
+                  <div>
+                    <b style="font-size: 10px;">></b>
+                  </div>
+                </div>
+                <div style="width: 1; border:1px dotted #e2e2e2;"></div>
+                <div class="left flex"
+                  style="width: 346px;height: 22px;padding: 9px 17px;flex-direction: row;justify-content: space-between;">
+                  <span style="color: #00b4b3;">1/4</span>
+                  <div class="flex">
+                    <p>
+                      < <p>>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="yingchang_chuxian" style="">
+              <div style="width: 4px;background-color: #e3f3f6;"></div>
+              <div class="flex"
+                style="z-index: 1000px;width: 783.4px; height: 338.8px; background-color:#fff;border-radius: 10px;">
+                <div class="content_yingchang" style="overflow: auto; ">
+                  <div class="yingchang" style="font-size: 16px;margin: 15px;">互联网/AI</div>
+                  <div class="flex" style="margin-top: 10px;">
+                    <div class="yingchang" style="font-size: 12px; margin-right: 50px;width: 80px;margin-left: 15px;">后端开发</div>
+                    <div class="yingchang flex" style="font-size: 12px;flex-wrap: wrap;font-size: 12px;">
+                      <p style="margin-right: 20px; padding-bottom: 10px">Java</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> C/C++</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">PHP</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> Python</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">C#</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">.NET </p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">Golang</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> Node.js</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">语音/视频/图形开发</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">GIS工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">区块链工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">全栈工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">其他后端开发</p>
+                    </div>
+                  </div>
+                  <div style=" height: 1px;background-color: #e2e2e2;"></div>
+                  <div class="flex" style="margin-top: 10px;">
+                    <div class="yingchang" style="font-size: 12px; margin-right: 50px;width: 80px;margin-left: 15px;">后端开发</div>
+                    <div class="yingchang flex" style="font-size: 12px;flex-wrap: wrap;font-size: 12px;">
+                      <p style="margin-right: 20px; padding-bottom: 10px">Java</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> C/C++</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">PHP</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> Python</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">C#</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">.NET </p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">Golang</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> Node.js</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">语音/视频/图形开发</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">GIS工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">区块链工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">全栈工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">其他后端开发</p>
+                    </div>
+                  </div>
+                  <div style=" height: 1px;background-color: #e2e2e2;"></div><div class="flex" style="margin-top: 10px;">
+                    <div class="yingchang" style="font-size: 12px; margin-right: 50px;width: 80px;margin-left: 15px;">后端开发</div>
+                    <div class="yingchang flex" style="font-size: 12px;flex-wrap: wrap;font-size: 12px;">
+                      <p style="margin-right: 20px; padding-bottom: 10px">Java</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> C/C++</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">PHP</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> Python</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">C#</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">.NET </p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">Golang</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> Node.js</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">语音/视频/图形开发</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">GIS工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">区块链工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">全栈工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">其他后端开发</p>
+                    </div>
+                  </div>
+                  <div style=" height: 1px;background-color: #e2e2e2;"></div><div class="flex" style="margin-top: 10px;">
+                    <div class="yingchang" style="font-size: 12px; margin-right: 50px;width: 80px;margin-left: 15px;">后端开发</div>
+                    <div class="yingchang flex" style="font-size: 12px;flex-wrap: wrap;font-size: 12px;">
+                      <p style="margin-right: 20px; padding-bottom: 10px">Java</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> C/C++</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">PHP</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> Python</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">C#</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">.NET </p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">Golang</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> Node.js</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">语音/视频/图形开发</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">GIS工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">区块链工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">全栈工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">其他后端开发</p>
+                    </div>
+                  </div>
+                  <div style=" height: 1px;background-color: #e2e2e2;"></div><div class="flex" style="margin-top: 10px;">
+                    <div class="yingchang" style="font-size: 12px; margin-right: 50px;width: 80px;margin-left: 15px;">后端开发</div>
+                    <div class="yingchang flex" style="font-size: 12px;flex-wrap: wrap;font-size: 12px;">
+                      <p style="margin-right: 20px; padding-bottom: 10px">Java</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> C/C++</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">PHP</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> Python</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">C#</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">.NET </p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">Golang</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> Node.js</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">语音/视频/图形开发</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">GIS工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">区块链工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">全栈工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">其他后端开发</p>
+                    </div>
+                  </div>
+                  <div style=" height: 1px;background-color: #e2e2e2;"></div><div class="flex" style="margin-top: 10px;">
+                    <div class="yingchang" style="font-size: 12px; margin-right: 50px;width: 80px;margin-left: 15px;">后端开发</div>
+                    <div class="yingchang flex" style="font-size: 12px;flex-wrap: wrap;font-size: 12px;">
+                      <p style="margin-right: 20px; padding-bottom: 10px">Java</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> C/C++</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">PHP</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> Python</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">C#</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">.NET </p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">Golang</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> Node.js</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">语音/视频/图形开发</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">GIS工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">区块链工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">全栈工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">其他后端开发</p>
+                    </div>
+                  </div>
+                  <div style=" height: 1px;background-color: #e2e2e2;"></div><div class="flex" style="margin-top: 10px;">
+                    <div class="yingchang" style="font-size: 12px; margin-right: 50px;width: 80px;margin-left: 15px;">后端开发</div>
+                    <div class="yingchang flex" style="font-size: 12px;flex-wrap: wrap;font-size: 12px;">
+                      <p style="margin-right: 20px; padding-bottom: 10px">Java</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> C/C++</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">PHP</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> Python</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">C#</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">.NET </p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">Golang</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> Node.js</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">语音/视频/图形开发</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">GIS工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">区块链工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">全栈工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">其他后端开发</p>
+                    </div>
+                  </div>
+                  <div style=" height: 1px;background-color: #e2e2e2;"></div><div class="flex" style="margin-top: 10px;">
+                    <div class="yingchang" style="font-size: 12px; margin-right: 50px;width: 80px;margin-left: 15px;">后端开发</div>
+                    <div class="yingchang flex" style="font-size: 12px;flex-wrap: wrap;font-size: 12px;">
+                      <p style="margin-right: 20px; padding-bottom: 10px">Java</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> C/C++</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">PHP</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> Python</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">C#</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">.NET </p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">Golang</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px"> Node.js</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">语音/视频/图形开发</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">GIS工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">区块链工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">全栈工程师</p>
+                      <p style="margin-right: 20px;padding-bottom: 10px">其他后端开发</p>
+                    </div>
+                  </div>
+                  <div style=" height: 1px;background-color: #e2e2e2;"></div>
+                  
+                  <div class="yingchang" style="font-size: 12px;"></div>
+                  <div class="yingchang" style="font-size: 12px;"></div>
+                  <div class="yingchang" style="font-size: 12px;"></div>
+                  <div class="yingchang" style="font-size: 12px;"></div>
+                  <div class="yingchang" style="font-size: 12px;"></div>
+                  <div class="yingchang" style="font-size: 12px;"></div>
+                  <div class="yingchang" style="font-size: 12px;"></div>
+                </div>
+              </div>
+              </div>
+              <div class="flex" style="display: none;">
+                <div class="box" style="background-color: #e3f3f6; border-radius: 10px;margin-left: 10px;">
+                  <div style="margin-left: 2px;" class="flex column">
+                    <div style="margin: 0;padding: 0;" class="flex">
+                      <img style="width: 522.4px; height: 226.4px; object-fit: cover;border-top-left-radius:10px ;"
+                        src="https://img.bosszhipin.com/beijin/activity/img/20240221/488f35070cc7d0b69dc062f990bbd71bccc41632c9c835a480c0fe17b37418f00945b742138a9e17.png.webp">
+                      <div style="width: 1px;"></div>
+                      <img style="width: 260px;height: 226.4px; border-top-right-radius:10px;"
+                        src="https://img.bosszhipin.com/beijin/activity/img/20240222/488f35070cc7d0b64964b50b0e6addabfb3df6182506fd7a80c0fe17b37418f00945b742138a9e17.png.webp"
+                        alt="" />
+                    </div>
+                    <div style="height: 1px;"></div>
+                    <div style="" class="flex">
+                      <img style="width: 522.4px; height: 112.4px; object-fit: cover;border-bottom-left-radius	:10px ;"
+                        src="https://img.bosszhipin.com/beijin/activity/img/20240222/488f35070cc7d0b6e7d068d9b8f96584408f60dcb37df3cd80c0fe17b37418f00945b742138a9e17.png.webp">
+                      <div style="width: 1px;"></div>
+                      <img style="width: 260px;height: 112.4px; border-bottom-right-radius:10px;"
+                        src="https://img.bosszhipin.com/beijin/activity/img/20240228/488f35070cc7d0b6d0945cbd3f9c51073ac02fecc9479e3780c0fe17b37418f00945b742138a9e17.png.webp"
+                        alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 页脚 -->
+          <div class="" style="height: 90px;background-color: aqua;margin-top: 100px;"></div>
+        </div>
+      </div>
+  </body>
+</html>
