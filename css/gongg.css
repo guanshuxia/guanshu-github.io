@@ -582,6 +582,7 @@ section {
           font-size: 10px;
           color: #8d8d8d;
           
+<<<<<<< HEAD
         }
         
  .sidebar-container-with-options {
@@ -649,3 +650,6 @@ section {
  .item-label-container span {
      margin-left: 10px;
  }       
+=======
+        }
+>>>>>>> 261196b202e2bdfd50affd35d7ef7f0a57b263ab
