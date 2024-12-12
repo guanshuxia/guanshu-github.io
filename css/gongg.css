@@ -1,12 +1,11 @@
 body {
   width: 100vw;
-  height: 100vh;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   scroll-behavior: smooth;
   /* 平滑滚动 */
-  background-color: #e5e5e5;
+  background-color: rgb(247, 247, 247);
 }
 
 * {
@@ -32,14 +31,16 @@ body {
 .mag {
   margin: auto;
 }
-
+.gongshiyewu_box{
+  color:rgb(104, 104, 104) ;
+}
 .mag_le {
   margin-left: 20px;
 }
 
-.mag_r {
+/* .mag_r {
   margin-right: 40px;
-}
+} */
 
 .back {
   background-color: antiquewhite;
@@ -57,9 +58,9 @@ body {
   background-color: #365bb9;
 }
 
-.baise_co {
+/* .baise_co {
   color: aliceblue;
-}
+} */
 
 .padding {
   padding: 8px;
@@ -90,7 +91,7 @@ body {
 }
 
 .heis {
-  height: 10px;
+  height: 70px;
 }
 
 .juzhong {
@@ -110,19 +111,22 @@ body {
 }
 
 .wh {
-  width: 1100px;
+  width: 1280px;
 }
-
+input {
+      outline: none;
+      
+}
 .search-container {
   position: relative;
-  width: 200px;
+  width: 310px;
 }
 
 #search-input {
   width: 100%;
   padding: 5px;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .search-results {
@@ -170,7 +174,7 @@ body {
   /* 链接文本颜色 */
   text-align: center;
   /* 文本居中 */
-  padding: 8px 20px;
+  padding: 19px 20px;
   /* 内边距 */
   text-decoration: none;
   /* 去掉下划线 */
@@ -419,12 +423,15 @@ section {
 }
   
 .gongshijies p{
-  margin: 2px;
-  font-size: 14px;
-  color: #9e9e9b;
+  margin: 0px;
+  font-size: 15px;
+  color: #8f8f8f;
 }
+ input[type='text']::-webkit-input-placeholder {
+            color: #7e7e7e;
+        }
 .sianzhou{
-  background-color: #e5e5e5;
+  background-color:  rgb(247, 247, 247);
   height: 170px;
   padding-top: 10px;
   width: 100vw;
@@ -433,32 +440,34 @@ section {
  .timeline {
      position: relative;
      width: 100%; /* 时间线宽度占满整个屏幕 */
-     height: 1px;
+     height: 0.5px;
      margin: 20px 0; /* 上下间距 */
-     border-top: 2px solid transparent;
-     background: linear-gradient(to right, rgba(255, 255, 255, 0.2), #3d68d4, rgba(255, 255, 255, 0.2)); /* 时间线颜色渐变 */
+     /* border-top: 0.5px solid transparent; */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.1), #365bb9, rgba(255, 255, 255, 0.1));
+ /* 时间线颜色渐变 */
  }
  .node {
      position: absolute;
-     width: 8px; /* 节点中心大小 */
-     height: 8px; /* 节点中心大小 */
+     width: 10px; /* 节点中心大小 */
+     height: 10px; /* 节点中心大小 */
      border-radius: 50%;
-     background-color: #365bb9; /* 节点中心颜色 */
-     border: 2px solid #4372e8; /* 外圈颜色 */
+     background-color:#365bb9; /* 节点中心颜色 */
+     border: 0px solid #365bb9;  /* 外圈颜色 */ 
      transform: translate(-50%, -50%);
  }
  .time-label {
      position: absolute;
      top: -30px; /* 时间标签位置 */
-     font-size: 12px;
+     font-size: 14px;
+     font-weight: bold;
      text-align: center;
      color: #224fc3;
  }
  .event-label {
      position: absolute;
      top: 20px; /* 事件描述位置 */
-     font-size: 10px;
-     color: #365bb9;
+     font-size: 14px;
+     color: rgba(102, 102, 102, 1);
      text-align: center;
  }
         /* 外圈样式 */
@@ -467,7 +476,7 @@ section {
             position: absolute;
             width: 20px; /* 外圈直径 */
             height: 20px; /* 外圈直径 */
-            background-color: rgba(0, 123, 255, 0.2); /* 外圈颜色淡 */
+            background-color: rgba(1, 103, 255, 0.2); /* 外圈颜色淡 */
             border-radius: 50%;
             top: 50%;
             left: 50%;
@@ -475,8 +484,14 @@ section {
             z-index: 0;
         }
         .gongshiyewu{
-          font-size: 12px;
+          font-size: 14px;
           color: #3d3d3d;
+        }
+        .gongshiyewu p{
+          /* text-decoration: none; */
+          list-style: none;
+          margin: 0;
+          padding: 0;
         }
         .navbar_box_too {
             background-color: white;
@@ -519,22 +534,29 @@ section {
             color: blue;
         }
         .navbar_custom {
-            width: 200px;
+            width: 315px;
             background-color: white;
-            border-right: 1px solid #ccc;
+            border-right: 1px solid #e2e2e2;
         }
         .navbar_custom_item {
-            padding: 15px;
+            height: 70px;
             cursor: pointer;
             color: black;
             text-align: center;
             transition: background-color 0.3s, color 0.3s;
         }
+       .navbar_custom_item p{
+          list-style: none;
+          text-decoration: none;
+          margin: auto;
+          padding-top: 23px;
+          color: #343434;
+        }
         .navbar_custom_item:hover {
             background-color: #d4e3f0;
         }
         .navbar_custom_item_active {
-            background-color: blue;
+           background-color: #365bb9;;
             color: white;
         }
         .content_custom {
@@ -542,7 +564,7 @@ section {
             padding: 10px;
         }
         .box_custom {
-            border: 1px solid #ccc;
+            border: 1px solid #e5e5e5;
             border-radius: 5px;
             margin: 10px 0;
             background-color: #f9f9f9;
@@ -581,8 +603,6 @@ section {
         .box_custom p{
           font-size: 10px;
           color: #8d8d8d;
-          
-<<<<<<< HEAD
         }
         
  .sidebar-container-with-options {

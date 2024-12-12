@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <template>
+    <div>
+      <el-tree
+        :data="treeData"
+        :props="defaultProps"
+        @node-click="handleNodeClick"
+        ref="tree">
+      </el-tree>
+      <button @click="getAllChildNodes(selectedNode)">获取子节点</button>
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    data() {
+      return {
+        treeData: [
+          {
+            id: 1,
+            label: '父节点 1',
+            children: [
+              { id: 2, label: '子节点 1-1' },
+              { id: 3, label: '子节点 1-2', children: [{ id: 4, label: '子节点 1-2-1' }] }
+            ]
+          },
+          {
+            id: 5,
+            label: '父节点 2',
+            children: [
+              { id: 6, label: '子节点 2-1' }
+            ]
+          }
+        ],
+        selectedNode: null,
+        defaultProps: {
+          children: 'children',
+          label: 'label'
+        }
+      };
+    },
+    methods: {
+      handleNodeClick(data) {
+        this.selectedNode = data;
+      },
+      getAllChildNodes(node) {
+        if (!node || !node.children) return [];
+  
+        const children = node.children;
+        let allChildren = [...children];
+  
+        children.forEach(child => {
+          allChildren = allChildren.concat(this.getAllChildNodes(child));
+        });
+  
+        console.log(allChildren); // 输出所有子节点
+        return allChildren;
+      }
+    }
+  };
+  </script>
+
+</body>
+</html>
